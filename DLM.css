@@ -1,0 +1,97 @@
+.top-background {
+    background-image: url('Centre.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+}
+
+body {
+    background-color: #515182; /* Light purple background */
+    font-family: Arial, sans-serif;
+    color: #0c0c0b; /* Dark text */
+    text-align: center; /* Centered text */
+    margin: 0; /* Removed top margin */
+    padding: 0; /* Reset default padding */
+}
+
+header {
+    background-color: #333333; /* Dark grey for header */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0; /* Align to the top */
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #121212; /* Dark color for logo text */
+    margin-left: 20px; /* Added margin for spacing */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a.active {
+    border-bottom: 2px solid #191918; /* Dark underline for active link */
+}
+
+nav a {
+    color: #0a0a0a; /* Dark text for navigation links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #FFFFFF; /* White text on hover */
+    background-color: #333333; /* Dark grey background on hover */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0%;
+        background-color: #333333; /* Dark grey background for mobile nav */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
+section {
+    transition: opacity 0.5s ease-in-out;
+    margin-bottom: 40px;
+    padding-top: 100px; /* Added padding to compensate for fixed header */
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+footer {
+    background-color: #333333; /* Dark grey for footer */
+    color: #FFD700; /* Gold text in footer */
+    padding: 10px 0;
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 0;
+    width: 100%; /* Full width */
+    text-align: center; /* Center-aligned text */
+}
